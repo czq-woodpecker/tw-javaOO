@@ -6,6 +6,7 @@ public class Student extends Person {
     public Student(Integer id, String name, Integer age, Klass klass) {
         super(id, name, age);
         this.klass = klass;
+        klass.appendMember(this);
     }
 
     public Klass getKlass() {
