@@ -1,5 +1,7 @@
 package practice09;
 
+import java.util.Objects;
+
 public class Person extends practice08.Person{
     private Integer id;
     private String name;
@@ -36,5 +38,11 @@ public class Person extends practice08.Person{
             return false;
         }
         return this.id == ((Person)object).getId();
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, name, age);
     }
 }
